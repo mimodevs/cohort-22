@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  width: 100%;
+}
+.col {
+  flex: 1 100%;
+}
+.col-left {
+  background: #cccccc;
+}
+.col-right {
+  background: url("ski.png");
+  background-size: cover;
+  background-position: center;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 100%;
+}
+
+/* for desktops */
+@media (min-width: 768px) {
+  .container {
+    flex-flow: row nowrap;
+  }
+  .two-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}

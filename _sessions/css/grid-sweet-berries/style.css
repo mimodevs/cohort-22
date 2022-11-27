@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* READ: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+  --main-bg-color: #f5f3ef;
+  --secondary-bg-color: #ffffff;
+  --accent-color: #febd2f;
+  --border-color: #dcdcdc;
+  --main-text-color: #000000;
+  --secondary-text-color: #646464;
+  --main-font: "Roboto", sans-serif;
+  --secondary-font: "Roboto Serif", serif;
+} 
+/* READ: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {box-sizing: border-box}
+*,
+*:before,
+*:after {box-sizing: inherit;}   
+
+body {
+  display: flex; 
+  flex: 1 1 auto;
+  flex-direction: column; 
+  min-height: 100vh; /* using vh units for height, so that the footer will always be at the bottom of the page */
+  background: var(--main-bg-color);
+  font-family: var(--main-font);
+  font-size: 16px;
+}
+h3 {
+  font-size: 1.125rem;
+}
+main {
+  display: flex; 
+  flex: 1 1 auto;
+  flex-direction: column; /* mobile first */
+}
+header {
+  box-shadow: 0 1px 6px rgba(0,0,0,.1);
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  display: inline-block;
+  padding: 0 1em 0 0;
+  text-decoration: none;
+  font-size: 1rem; /* 16px */
+}
+footer{
+  background: var(--accent-color);
+  padding:20px
+}
+.cards {
+  display: grid;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-gap: 1rem;
+}
+.card {
+  background: #ccc;
+  padding: 1rem;
+}
+/* tables 2 column */
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+ /* desktop 3 column */
+@media (min-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* :root,
+    :root.light {
+      --main-bg-color: #f5f3ef;
+      --secondary-bg-color: #ffffff;
+      --accent-color: #febd2f;
+      --border-color: #dcdcdc;
+      --main-text-color: #000000;
+      --secondary-text-color: #646464;
+      --main-font: "Open Sans", sans-serif;
+    }
+ 
+    :root.dark {
+      --main-bg-color: #ccc;
+      --secondary-bg-color: #ffffff;
+      --accent-color: #febd2f;
+      --border-color: #dcdcdc;
+      --main-text-color: #000000;
+      --secondary-text-color: #646464;
+      --main-font: "Open Sans", sans-serif;
+    } */

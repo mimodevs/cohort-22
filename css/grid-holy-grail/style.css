@@ -1,0 +1,75 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 80px 1fr auto;
+  grid-gap: 12px;
+  grid-template-areas:
+  "header header header"
+  "nav content side"
+  "footer footer footer";
+  height: 100vh;
+
+}
+
+header {
+  color: white;
+  font-size: 14px;
+  grid-area: header;
+  text-align: center;
+  background-color: #FA7D44;
+
+}
+
+nav {
+  grid-area: nav;
+  margin-left: 0.6rem;
+  background-color: #2A92BF;
+}
+
+main {
+  grid-area: content;
+  background-color: #F4CE46;
+  padding: 25px;
+}
+
+aside {
+  grid-area: side;
+  margin-right: 0.6rem;
+  background-color: #2A92BF;
+}
+footer {
+  grid-area: footer;
+  background-color:#2BB961;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+}
+
+@media (max-width: 991px) {
+  nav, 
+  aside {
+    margin: 0;
+  }
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "side"
+      "footer";
+    grid-template-rows:auto minmax(60px, auto) 1fr minmax(70px, auto) auto;
+  }
+}

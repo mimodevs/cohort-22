@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox: Split Screen Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="col col-left">
+          <img src="assets/Insights.svg" />
+          <h1>Split Flex</h1>
+        </div>
+
+        <div class="col col-right">
+          <h2>Ideas?</h2>
+          <div class="form-container">
+            <div class="form-box">
+              <form name="form">
+                <div class="two-columns">
+                  <fieldset>
+                    <label for="last-name"
+                      >Last name<span class="required"> *</span></label
+                    >
+                    <input
+                      id="last-name"
+                      type="text"
+                      name="your-last-name"
+                      placeholder="Your last name"
+                      required
+                    />
+                  </fieldset>
+
+                  <fieldset>
+                    <label for="first-name"
+                      >First name<span class="required"> *</span></label
+                    >
+                    <input
+                      id="first-name"
+                      type="text"
+                      name="your-first-name"
+                      placeholder="Your first name"
+                      required
+                    />
+                  </fieldset>
+                </div>
+
+                <fieldset>
+                  <label for="email"
+                    >Email address<span class="required"> *</span></label
+                  >
+                  <input
+                    id="email"
+                    type="email"
+                    name="your-email"
+                    placeholder="Email@example.com"
+                    required
+                  />
+                </fieldset>
+
+                <fieldset>
+                  <label for="subject"
+                    >Subject<span class="required"> *</span></label
+                  >
+                  <input
+                    id="subject"
+                    type="text"
+                    name="your-subject"
+                    placeholder="Enter subject"
+                    required
+                  />
+                </fieldset>
+
+                <fieldset>
+                  <label for="comments"
+                    >Comments<span class="required"> *</span></label
+                  >
+                  <textarea
+                    id="comments"
+                    name="your-comments"
+                    placeholder="Enter comments"
+                    required
+                  ></textarea>
+                </fieldset>
+                <button type="submit">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
