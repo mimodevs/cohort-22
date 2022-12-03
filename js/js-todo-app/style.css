@@ -1,0 +1,41 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  color: #899098;
+  border-bottom: 1px solid #cfcbcc;
+  line-height: 1.5;
+  padding: 8px 0;
+}
+ul li:before {
+  content: "□";
+  padding: 10px 10px;
+  font-size: 20px;
+}
+ul li:hover {
+  text-decoration: line-through;
+  cursor: pointer;
+}
+ul li:last-child {
+  border-bottom: none;
+}
+
+.checked {
+  color: green;
+}
+.checked:before {
+  content: "✓";
+  /* padding: 10px 10px;
+  font-size: 50px; */
+}
+
+.checked:hover {
+  text-decoration: none;
+}
+.checked:hover:after {
+  content: "(remove)";
+  color: tomato;
+  text-align: right;
+}
