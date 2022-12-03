@@ -2,16 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 /* READ: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
-:root {
-  --main-bg-color: #f5f3ef;
-  --secondary-bg-color: #ffffff;
-  --accent-color: #febd2f;
-  --border-color: #dcdcdc;
-  --main-text-color: #000000;
-  --secondary-text-color: #646464;
-  --main-font: "Roboto", sans-serif;
-  --secondary-font: "Roboto Serif", serif;
-} 
+:root,
+    :root.light {
+      --main-bg-color: #f5f3ef;
+      --secondary-bg-color: #ffffff;
+      --accent-color: #febd2f;
+      --border-color: #dcdcdc;
+      --main-text-color: #000000;
+      --secondary-text-color: #646464;
+      --main-font: "Open Sans", sans-serif;
+    }
+ 
+    :root.dark {
+      --main-bg-color: #ccc;
+      --secondary-bg-color: #ffffff;
+      --accent-color: black;
+      --border-color: #dcdcdc;
+      --main-text-color: #000000;
+      --secondary-text-color: #646464;
+      --main-font: "Open Sans", sans-serif;
+    } 
 /* READ: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {box-sizing: border-box}
 *,
@@ -87,23 +97,3 @@ footer{
 
 
 
-/* :root,
-    :root.light {
-      --main-bg-color: #f5f3ef;
-      --secondary-bg-color: #ffffff;
-      --accent-color: #febd2f;
-      --border-color: #dcdcdc;
-      --main-text-color: #000000;
-      --secondary-text-color: #646464;
-      --main-font: "Open Sans", sans-serif;
-    }
- 
-    :root.dark {
-      --main-bg-color: #ccc;
-      --secondary-bg-color: #ffffff;
-      --accent-color: #febd2f;
-      --border-color: #dcdcdc;
-      --main-text-color: #000000;
-      --secondary-text-color: #646464;
-      --main-font: "Open Sans", sans-serif;
-    } */
