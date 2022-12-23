@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+#none {
+  display: none;
+}
+
+#profile-container {
+  visibility: hidden;
+}
